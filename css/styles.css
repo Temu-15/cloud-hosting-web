@@ -217,6 +217,9 @@ a {
   color: #fff;
 }
 
+.btn--anchor  {
+  color:#fff;
+}
 .btn--accent:hover {
   background: #ec3000;
 }
@@ -502,6 +505,10 @@ a {
   display: none;
 }
 
+.collapsible__content  a  {
+  color:var(--color-body);
+}
+
 .collapsible__expanded .collapsible__content {
   display: block;
 }
@@ -590,9 +597,6 @@ a {
   color: #fff;
 }
 
-.block--dark a {
-  color: #fff;
-}
 .block--skewed-right {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);

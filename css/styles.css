@@ -99,7 +99,7 @@ a {
 }
 
 .badge--small {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 .badge--primary {
   background: var(--color-primary);
@@ -115,7 +115,7 @@ a {
     font-size: 1.5rem;
   }
   .badge--small {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -217,8 +217,8 @@ a {
   color: #fff;
 }
 
-.btn--anchor  {
-  color:#fff;
+.btn--anchor {
+  color: #fff;
 }
 .btn--accent:hover {
   background: #ec3000;
@@ -288,12 +288,11 @@ a {
 
 /* cards */
 .card {
-  border-radius: 15px;
+  border-radius: 10px;
   box-shadow: 0 0 20px 20px #f3f3f3;
   overflow: hidden;
   margin: 1rem 1.5rem 4rem 1.5rem;
   max-width: 500px;
-  margin: 0 auto;
   transition: transform 0.2s ease-out;
   margin-bottom: 8rem;
 }
@@ -308,18 +307,21 @@ a {
   color: #fff;
 }
 
-.card__header,
 .card__body {
-  padding: 2rem 3rem;
+  padding: 2rem 2rem;
+}
+
+.card__header {
+  padding: 2rem 0 1rem 2rem;
 }
 
 .card__body .list__item {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 @media screen and (min-width: 1024px) {
   .card {
-    margin-bottom: 4rem;
+    margin: 1rem 0 4rem 0;
   }
 }
 
@@ -331,11 +333,11 @@ a {
 .plan__price {
   font-size: 6rem;
   margin-bottom: 0;
+  line-height: 0.8;
   display: inline-block;
 }
 
-.billing__cycle,
-.plan__description {
+.billing__cycle {
   /* color: var(--color-body); */
   opacity: 0.8;
   display: inline-block;
@@ -373,12 +375,16 @@ a {
   text-align: center;
 }
 .quote__image {
+  padding: 2rem 2rem;
   position: relative;
 }
 .quote__image .icon-container {
   position: absolute;
-  right: -3rem;
+  right: 0rem;
   top: 3rem;
+}
+.testimonial__image {
+  width: 100%;
 }
 
 .quote .icon-container {
@@ -386,10 +392,8 @@ a {
 }
 
 .quote__text {
-  width: 35ch;
   color: #66656b;
-  font-size: 2rem;
-  opacity: 0.8;
+  font-size: 2.2rem;
 }
 
 .quote__text::before,
@@ -428,7 +432,20 @@ a {
     margin: auto;
     width: 75vw;
   }
-
+  .quote__text {
+    width: 35ch;
+    text-align: left;
+    margin-left: 2rem;
+  }
+  .quote__image {
+    padding: 1rem 0;
+    position: relative;
+  }
+  .quote__image .icon-container {
+    position: absolute;
+    right: -3rem;
+    top: 3rem;
+  }
   .author__name {
     font-size: 2.4rem;
   }
@@ -439,19 +456,19 @@ a {
   width: 100%;
   background: var(--color-primary);
   color: #fff;
-  padding: 1rem 5rem;
+  padding: 1rem 2rem;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-top: 3rem;
 }
 
 .callout__header {
   color: #fff;
-  white-space: nowrap;
+  margin-bottom: 3rem;
 }
 
 .callout__message {
-  color: #f8f5f5;
+  color: #fff;
   font-size: 1.8rem;
   margin-bottom: 3rem;
 }
@@ -505,10 +522,9 @@ a {
   display: none;
 }
 
-.collapsible__content  a  {
-  color:var(--color-body);
+.collapsible__content a {
+  color: var(--color-body);
 }
-
 .collapsible__expanded .collapsible__content {
   display: block;
 }
@@ -681,9 +697,6 @@ a {
   }
 }
 /*plan blocks */
-.card--popular {
-  transform: scale(1.1);
-}
 
 .card:hover {
   transform: scale(1.05);
@@ -692,11 +705,18 @@ a {
   transform: scale(1.15);
 }
 
+.card .badge {
+  display: inline-block;
+}
+
 @media screen and (min-width: 1024px) {
+  .card--popular {
+    transform: scale(1.1);
+  }
+
   .plan-block {
     display: flex;
-    justify-content: space-evenly;
-    gap: 4rem;
+    justify-content: space-around;
     margin-bottom: 12rem;
   }
 }
@@ -736,8 +756,8 @@ a {
   margin-bottom: 3rem;
 }
 
-.feature__content p {
-  font-size: 2.4rem;
+.feature__content {
+  font-size: 2rem;
   color: var(--color-body);
 }
 .feature__heading {
@@ -787,8 +807,10 @@ a {
   margin: 0;
   padding: 5rem 1rem 10rem;
 }
-.showcase-block > h2,
-h3 {
+.showcase-block h2 {
+  color: #fff;
+}
+.showcase-block h3 {
   color: #fff;
 }
 .showcase__heading {
@@ -799,7 +821,6 @@ h3 {
 
 .showcase__image {
   width: 100%;
-  min-width: 470px;
   margin-top: 4rem;
 }
 
@@ -811,6 +832,7 @@ h3 {
     grid-column: span 2;
   }
   .showcase__image {
+    min-width: 470px;
     justify-content: center;
     align-items: center;
   }
